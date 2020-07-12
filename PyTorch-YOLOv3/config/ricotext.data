@@ -1,0 +1,5 @@
+classes=15
+train=data/ricotext/train.txt
+valid=data/ricotext/val.txt
+test=data/ricotext/test.txt
+names=data/ricotext/classes.names

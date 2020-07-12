@@ -1,0 +1,1 @@
+python3 train.py CenterNet-52-ricotext  

@@ -1,0 +1,10 @@
+cython
+cffi
+opencv-python
+scipy
+msgpack
+easydict
+matplotlib
+pyyaml
+tensorboardX
+pytorch==1.0.1

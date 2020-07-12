@@ -1,0 +1,1 @@
+python3 test.py CenterNet-52-ricotext --testiter 80000 --split val 

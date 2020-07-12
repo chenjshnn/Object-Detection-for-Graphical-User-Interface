@@ -1,0 +1,12 @@
+source github: https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0
+
+Environment: cuda 9.0, pytorch 1.1.0, ubuntu 16.0?, Nvidia 1080 Ti
+
+python 3.5
+
+1. pip install -r requirements.txt
+2. cd lib & python setup.py build develop
+
+train.sh -- use to train the model
+test.sh -- use to test the test dataset
+demo.sh -- use to detect objects in imgs

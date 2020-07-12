@@ -1,0 +1,1 @@
+python3 detect.py --image_folder data/samples/

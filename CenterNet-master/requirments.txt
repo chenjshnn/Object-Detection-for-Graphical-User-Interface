@@ -1,0 +1,10 @@
+imagesize
+opencv-python
+tqdm
+opencv
+numpy
+json
+pytorch==1.0.1
+importlib
+
+

@@ -1,0 +1,5 @@
+classes=14
+train=data/rico/train.txt
+valid=data/rico/val.txt
+test=data/rico/test.txt
+names=data/rico/classes.names

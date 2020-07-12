@@ -1,0 +1,66 @@
+1. generate anchor boxes
+-> data/rico/train.txt 
+replace 'images' with 'JPEGImages'
+rename data/rico/'images' as data/rico/'JPEGImages'
+
+go to darknet
+run
+bash ./gen_anchors.sh
+
+2. config/yolov3-??.cfg, 
+
+-> Training Yolo v3:
+
+change line batch to batch=64
+
+change line subdivisions to subdivisions=16
+#7
+set network size width=416 height=416 or any value multiple of 32:
+--> Line 9/10:
+width=608
+height=608
+
+==> For classes = 14
+change line max_batches to (classes*2000 but not less than 4000), i.e. max_batches=6000 if you train for 3 classes
+--> Line 21: max_batches=28000
+
+change line steps to 80% and 90% of max_batches, f.e. steps=4800,5400
+--> Line 24: steps=22400,25200
+
+
+change line classes=80 to your number of objects in each of 3 [yolo]-layers:
+--> Line 611/697/784: classes=14
+
+change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer
+--> Line 604/690/777: filters=57
+
+change anchor box with the computed anchor box in step 1
+-->  Line 610/696/783 
+## 50k
+anchors =  29, 16,  58, 26,  69, 42, 102, 50, 227, 34, 190,100, 527, 37, 459,159, 596,345
+## 2k
+anchors =  29, 16,  51, 29,  83, 41, 337, 19, 146, 60,  53,283, 496, 42, 274,124, 582,272
+## 10k
+anchors =  30, 16,  56, 30,  88, 46, 346, 13, 202, 40, 186,103, 519, 40, 454,159, 600,348
+
+
+==> For classes = 15
+change line max_batches to (classes*2000 but not less than 4000), i.e. max_batches=6000 if you train for 3 classes
+--> Line 21: max_batches=30000
+
+change line steps to 80% and 90% of max_batches, f.e. steps=4800,5400
+--> Line 24: steps=24000,27000
+
+change line classes=80 to your number of objects in each of 3 [yolo]-layers:
+--> Line 611/697/784: classes=15
+
+change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer
+--> Line 604/690/777: filters=60
+
+change anchor box with the computed anchor box in step 1
+-->  Line 610/696/783 
+## ricotext
+anchors =  38, 16, 122, 17,  61, 34,  98, 50, 334, 17, 194, 29, 475, 41, 210,107, 543,223
+
+
+you should change indexes of anchors masks= for each [yolo]-layer, so that 1st-[yolo]-layer has anchors larger than 60x60, 2nd larger than 30x30, 3rd remaining.

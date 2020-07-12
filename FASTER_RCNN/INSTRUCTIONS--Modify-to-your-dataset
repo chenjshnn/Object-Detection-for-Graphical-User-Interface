@@ -1,0 +1,53 @@
+modify code to your own dataset
+
+==> lib/datasets/rico.py
+line 28: year -> year=""
+line 53-57: values -> ""
+line 102-103: 'COCO_'... --> (str(index)+.jpg)
+
+Line 48 => use to modify the number of training dataset
+
+==> lib/datasets/factory.py
+line 16 : add 
+from datasets.rico import rico
+
+line 63: add
+# set up rico
+for split in ['train', 'val', 'test']:
+    name = 'rico_{}'.format(split)
+    __sets[name] = (lambda split=split: rico(split, "rico"))
+
+==> trainval_net.py
+line 180-184:
+
+  elif args.dataset == "rico":
+      args.imdb_name = "rico_train"
+      args.imdbval_name = "rico_val"
+      args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[1, 2, 4, 8]', 'MAX_NUM_GT_BOXES', '30']
+
+
+==> train.sh
+python3 trainval_net.py \
+--dataset rico \
+--net res101 \
+--bs 6 \
+--nw 4 \
+--lr 0.00025 \
+--cuda \
+--use_tfboard
+
+
+==>demo.py
+line168: change class to your own class
+line 267: -> im_in = np.array(imread(im_file, as_gray=False, pilmode="RGB"))
+
+==> lib/model/utils/config.py (no need now)
+line 289
+line 292
+line 295
+
+modify to your own value
+['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[1, 2, 4, 8]', 'MAX_NUM_GT_BOXES', '30']
+
+
+==>  for debug

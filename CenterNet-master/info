@@ -1,0 +1,42 @@
+@apatsekin sorry, i didn't save the full training log. The final loss is about :
+training loss: 3.5885119438171387
+validation loss at iteration: 3.860023260116577
+
+
+# top_pool.cpython-35m-x86_64-linux-gnu.so: undefined symbol: _ZTIN3c1021AutogradMetaInterfaceE
+```
+rm models/py_utils/_cpools/build/* and models/py_utils/_cpools/dist
+python3 setup.py install --user
+```
+
+==> config/CenterNet-52.json
+Line 3: dataset: rico ==> dataset:rico10k
+Line 26 “categories":80 ==> “categories":8（类别数）
+
+
+The following modification will be automatically modified based on the above change
+==> models/CenterNet-52.py or models/CenterNet-104.py
+Line 132: out_dim =80 ==> out_dim =8 (类别数)
+
+==> db/detection.py 
+Line 8: self._configs[ “categories"] = 80 ==> self._configs[ “categories"] = 8 (类别数)
+Line 72: num_classes=81 ==> num_classes=9 （类别数+1）
+
+==> db/rico.py
+Line 44: cate_ids
+
+==> models/py_utils/kp_utils
+line 217 add:
+    if len(tag_mean.size()) < 2:
+        tag_mean = tag_mean.unsqueeze(0)
+
+
+test error
+==> db/rico.py
+line 139: self._classes[cls_ind]  -> cls_ind
+line 164: [self._classes[cls_id] for cls_id in cls_ids] -> cls_ids
+
+
+for debug
+==> test/coco.py
+line 87: num_images -> 10
