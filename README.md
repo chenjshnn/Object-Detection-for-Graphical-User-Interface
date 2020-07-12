@@ -7,9 +7,48 @@
 - Paper: Coming soon
 
 
-## USAGE
+## Environment Setup
 
-...
+### FASTER RCNN
+
+``
+cd FASTER_RCNN
+pip install -r requirements.txt
+rm lib/build/*
+cd lib & python setup.py build develop
+``
+
+### YOLOv3
+
+Coming soon
+
+
+### CenterNet
+
+```
+cd CenterNet-master
+pip install -r requirements.txt
+rm models/py_utils/_cpools/build/*
+cd models/py_utils/_cpools & python setup.py install --user
+```
+
+### Xianyu
+
+Coming soon
+
+
+### REMAUI
+
+Coming soon
+
+
+### Our model
+
+Coming soon
+
+
+## Testing
+
 
 
 
