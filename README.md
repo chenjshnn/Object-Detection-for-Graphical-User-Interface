@@ -1,7 +1,7 @@
 # Object-Detection-for-Graphical-User-Interface
 FSE2020: Object Detection for Graphical User Interface: Old Fashioned or Deep Learning or a Combination?
 
-*This repository includes all code/models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI, Our model
+*This repository includes all code/models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI and our model*
 
 - Paper: Coming soon
 
