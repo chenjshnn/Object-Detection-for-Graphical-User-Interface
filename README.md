@@ -13,7 +13,7 @@
 
 
 
-## Acknowledges
+## ACKNOWNLEDGES
 
 The implementations of Faster RCNN, YOLO v3, CenterNet and REMAUI are based on the following GitHub Repositories. Thank for the works.
 
