@@ -10,11 +10,11 @@
 
 
 
-### ENVIRONMENT SETUP
+## ENVIRONMENT SETUP
 
 All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.5, Pytorch 1.0.1, Nvidia 1080 Ti
 
-#### Faster RCNN
+### Faster RCNN
 
 ```
 cd FASTER_RCNN
@@ -23,12 +23,12 @@ rm lib/build/*
 cd lib & python setup.py build develop
 ```
 
-#### YOLOv3
+### YOLOv3
 
 Coming soon
 
 
-#### CenterNet
+### CenterNet
 
 ```
 cd CenterNet-master
@@ -37,27 +37,27 @@ rm models/py_utils/_cpools/build/*
 cd models/py_utils/_cpools & python setup.py install --user
 ```
 
-#### Xianyu
+### Xianyu
 
 Coming soon
 
 
-#### REMAUI
+### REMAUI
 
 Coming soon
 
 
-#### Our model
+### Our model
 
 Coming soon
 
 
-### TRAINING
+## TRAINING
 
-### TESTING
+## TESTING
 
 
-### ACKNOWNLEDGES
+## ACKNOWNLEDGES
 
 The implementations of Faster RCNN, YOLO v3, CenterNet and REMAUI are based on the following GitHub Repositories. Thank for the works.
 
