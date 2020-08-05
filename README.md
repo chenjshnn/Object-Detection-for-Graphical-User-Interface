@@ -2,7 +2,7 @@
 
 **Accepted to FSE2020**
 
-*This repository includes all code/models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI and our model*
+*This repository includes all code/pretrained models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI and our model*
 
 - Paper: Coming soon
 - Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
