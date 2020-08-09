@@ -55,7 +55,6 @@ Coming soon
 Coming soon
 
 
-<<<<<<< HEAD
 ## Testing
 
 ### FASTER RCNN
@@ -95,11 +94,6 @@ python demo.py  --cfg_file CenterNet-52-[DATASET] --test_folder [FOLDER-TO-TEST]
 *DATASET OPTIONS: rico, rico2k, rico10k, ricotext*
 
 *Put the pretrained model in the folder ("CenterNet-master/results/run/CenterNet-52/{dataset}"). For example, for "rico" dataset, place the model in "CenterNet-master/results/run/CenterNet-52/rico"*
-=======
-## TRAINING
-
-## TESTING
->>>>>>> cb1c509dce686fffbec7ebbcc134cd7e03afe919
 
 
 ## ACKNOWNLEDGES
