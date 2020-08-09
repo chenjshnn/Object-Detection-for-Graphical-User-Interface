@@ -53,12 +53,14 @@ Put the pretrained model in the folder *FASTER_RCNN/results/run/res101/[DATASET]
 ### YOLOv3
 
 **Setup**
+
 ```
 cd PyTorch-YOLOv3
 pip install -r requirements.txt
 ```
 
 **Test**
+
 ```
 python detect.py  \
 --dataset [DATASET] \
@@ -67,6 +69,7 @@ python detect.py  \
 ```
 
 Dataset options: rico, rico2k, rico10k, rico5box, ricotext
+
 Place the pretrained model in the folder *PyTorch-YOLOv3/result/run/[DATASET]*
 
 
@@ -74,6 +77,7 @@ Place the pretrained model in the folder *PyTorch-YOLOv3/result/run/[DATASET]*
 ### CenterNet
 
 **Setup**
+
 ```
 cd CenterNet-master
 pip install -r requirements.txt
@@ -82,6 +86,7 @@ cd models/py_utils/_cpools & python setup.py install --user
 ```
 
 **Test**
+
 ```
 python demo.py  \
 --cfg_file CenterNet-52-[DATASET] \
@@ -89,6 +94,7 @@ python demo.py  \
 ```
 
 Dataset options: rico, rico2k, rico10k, ricotext
+
 Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet-52/[DATASET]*
 
 
@@ -117,7 +123,8 @@ python3 detect.py --test_folder [FOLDER-TO-TEST]
 
 
 ### REMAUI
-Coming soon
+
+See https://github.com/soumikmohianuta/pixtoapp
 
 
 
