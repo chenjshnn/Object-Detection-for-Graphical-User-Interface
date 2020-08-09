@@ -95,6 +95,7 @@ Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet
 ### Xianyu
 
 **Setup**
+
 *Tesseract*
 
 ```
