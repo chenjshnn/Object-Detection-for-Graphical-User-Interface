@@ -11,15 +11,22 @@
 - Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
 - Dataset: Our dataset is based on [Rico](https://interactionmining.org/rico)
 
-- Pretrained Models: [DropBox](.)
+- Pretrained Models: [DropBox](https://www.dropbox.com/sh/xm1ssjkrqep3tah/AADwr4TAaVGak6wx57xuTVZsa?dl=0)
 
-- Code: see in this repository
 
-## ENVIRONMENT SETUP
-
+## Code
 All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.5, Pytorch 1.0.1, Nvidia 1080 Ti
 
+
+### Our model
+
+Coming soon
+
+
+
 ### Faster RCNN
+
+#### Setup
 
 ```
 cd FASTER_RCNN
@@ -28,53 +35,7 @@ rm lib/build/*
 cd lib & python setup.py build develop
 ```
 
-### YOLOv3
-
-```
-cd PyTorch-YOLOv3
-pip install -r requirements.txt
-```
-
-
-### CenterNet
-
-```
-cd CenterNet-master
-pip install -r requirements.txt
-rm models/py_utils/_cpools/build/*
-cd models/py_utils/_cpools & python setup.py install --user
-```
-
-### Xianyu
-
-** Tesseract
-
-```
-sudo add-apt-repository -y ppa:alex-p/tesseract-ocr 
-sudo apt update
-sudo apt install  -y tesseract-ocr
-```
-
-** opencv
-
-```
-python3 -m pip install opencv-python
-```
-
-
-### REMAUI
-
-Coming soon
-
-
-### Our model
-
-Coming soon
-
-
-## TESTING
-
-### Faster RCNN
+#### Test
 
 ```
 python demo.py \
@@ -93,6 +54,15 @@ Put the pretrained model in the folder *FASTER_RCNN/results/run/res101/[DATASET]
 
 
 ### YOLOv3
+
+#### Setup
+
+```
+cd PyTorch-YOLOv3
+pip install -r requirements.txt
+```
+
+#### Test
 ```
 python detect.py  \
 --dataset [DATASET] \
@@ -105,7 +75,21 @@ Dataset options: rico, rico2k, rico10k, rico5box, ricotext
 Place the pretrained model in the folder *PyTorch-YOLOv3/result/run/[DATASET]*
 
 
+
 ### CenterNet
+
+#### Setup
+
+
+```
+cd CenterNet-master
+pip install -r requirements.txt
+rm models/py_utils/_cpools/build/*
+cd models/py_utils/_cpools & python setup.py install --user
+```
+
+#### Test
+
 ```
 python demo.py  \
 --cfg_file CenterNet-52-[DATASET] \
@@ -118,9 +102,40 @@ Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet
 
 
 ### Xianyu
+
+#### Setup
+
+**Tesseract**
+
+```
+sudo add-apt-repository -y ppa:alex-p/tesseract-ocr 
+sudo apt update
+sudo apt install  -y tesseract-ocr
+```
+
+**Opencv**
+
+```
+python3 -m pip install opencv-python
+```
+
+
+#### Test
+
 ```
 python3 detect.py --test_folder [FOLDER-TO-TEST]
 ```
+
+
+
+### REMAUI
+
+Coming soon
+
+
+
+
+
 
 ## ACKNOWNLEDGES
 
