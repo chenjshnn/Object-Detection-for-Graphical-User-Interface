@@ -1,14 +1,19 @@
 # Object Detection for Graphical User Interface: Old Fashioned or Deep Learning or a Combination?
 
-**Accepted to FSE2020**
+**Accepted to ESEC/FSE2020**
 
 *This repository includes all code/pretrained models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI and our model*
+
+
+## RESOURCE
 
 - Paper: Coming soon
 - Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
 - Dataset: Our dataset is based on [Rico](https://interactionmining.org/rico)
 
+- Pretrained Models: [DropBox]()
 
+- Code: see in this repository
 
 ## ENVIRONMENT SETUP
 
@@ -70,7 +75,7 @@ python demo.py \
 --image_dir [FOLDER-TO-TEST] \
 ```
 
-Dataset options: rico, rico2k, rico10k, ricoDefault, ricoCustomized, ricoText
+Dataset options: ricoCustomized, rico2k, rico10k, ricoDefault, ricoText
 
 Put the pretrained model in the folder *FASTER_RCNN/results/run/res101/[DATASET]*
 
