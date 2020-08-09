@@ -26,7 +26,7 @@ Coming soon
 
 ### Faster RCNN
 
-#### Setup
+**Setup**
 
 ```
 cd FASTER_RCNN
@@ -35,7 +35,7 @@ rm lib/build/*
 cd lib & python setup.py build develop
 ```
 
-#### Test
+**Test**
 
 ```
 python demo.py \
@@ -55,14 +55,15 @@ Put the pretrained model in the folder *FASTER_RCNN/results/run/res101/[DATASET]
 
 ### YOLOv3
 
-#### Setup
+**Setup**
 
 ```
 cd PyTorch-YOLOv3
 pip install -r requirements.txt
 ```
 
-#### Test
+**Test**
+
 ```
 python detect.py  \
 --dataset [DATASET] \
@@ -78,7 +79,7 @@ Place the pretrained model in the folder *PyTorch-YOLOv3/result/run/[DATASET]*
 
 ### CenterNet
 
-#### Setup
+**Setup**
 
 
 ```
@@ -88,7 +89,7 @@ rm models/py_utils/_cpools/build/*
 cd models/py_utils/_cpools & python setup.py install --user
 ```
 
-#### Test
+**Test**
 
 ```
 python demo.py  \
@@ -103,9 +104,9 @@ Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet
 
 ### Xianyu
 
-#### Setup
+**Setup**
 
-**Tesseract**
+*Tesseract*
 
 ```
 sudo add-apt-repository -y ppa:alex-p/tesseract-ocr 
@@ -113,15 +114,13 @@ sudo apt update
 sudo apt install  -y tesseract-ocr
 ```
 
-**Opencv**
+*Opencv*
 
 ```
 python3 -m pip install opencv-python
 ```
 
-
-#### Test
-
+**Test**
 ```
 python3 detect.py --test_folder [FOLDER-TO-TEST]
 ```
