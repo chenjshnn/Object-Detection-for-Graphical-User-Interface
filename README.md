@@ -2,17 +2,19 @@
 
 **Accepted to FSE2020**
 
-*This repository includes all code/models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI and our model*
+*This repository includes all code/pretrained models in our paper, namely Faster RCNN, YOLO v3, CenterNet, Xianyu, REMAUI and our model*
 
 - Paper: Coming soon
+- Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
+- Dataset: Our dataset is based on [Rico](https://interactionmining.org/rico)
 
 
 
-## Environment Setup
+## ENVIRONMENT SETUP
 
-Basic: Ubuntu 16.04, Cuda 9.0, PyThon 3.5, Pytorch 1.0.1, Nvidia 1080 Ti
+All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.5, Pytorch 1.0.1, Nvidia 1080 Ti
 
-### FASTER RCNN
+### Faster RCNN
 
 ```
 cd FASTER_RCNN
@@ -53,6 +55,7 @@ Coming soon
 Coming soon
 
 
+<<<<<<< HEAD
 ## Testing
 
 ### FASTER RCNN
@@ -92,6 +95,11 @@ python demo.py  --cfg_file CenterNet-52-[DATASET] --test_folder [FOLDER-TO-TEST]
 *DATASET OPTIONS: rico, rico2k, rico10k, ricotext*
 
 *Put the pretrained model in the folder ("CenterNet-master/results/run/CenterNet-52/{dataset}"). For example, for "rico" dataset, place the model in "CenterNet-master/results/run/CenterNet-52/rico"*
+=======
+## TRAINING
+
+## TESTING
+>>>>>>> cb1c509dce686fffbec7ebbcc134cd7e03afe919
 
 
 ## ACKNOWNLEDGES
