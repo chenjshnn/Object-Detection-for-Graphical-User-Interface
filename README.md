@@ -55,9 +55,9 @@ Coming soon
 Coming soon
 
 
-## Testing
+## TESTING
 
-### FASTER RCNN
+### Faster RCNN
 
 ```
 python demo.py \
@@ -70,37 +70,34 @@ python demo.py \
 --image_dir [FOLDER-TO-TEST] \
 ```
 
-DATASET OPTIONS: rico, rico2k, rico10k, ricoDefault, ricoCustomized, ricoText
+Dataset options: rico, rico2k, rico10k, ricoDefault, ricoCustomized, ricoText
 
-Put the pretrained model in the folder ("FASTER_RCNN/results/run/res101/{dataset}"). 
+Put the pretrained model in the folder *FASTER_RCNN/results/run/res101/[DATASET]*
 
-- For example, for "ricoCustomized" dataset, place the model in "FASTER_RCNN/results/run/res101/ricoCustomized"
 
 ### YOLOv3
 ```
 python detect.py  \
 --dataset [DATASET] \
---weights_path result/run/ricotext/yolov3_ckpt.pth \
+--weights_path result/run/[DATASET]/yolov3_ckpt.pth \
 --image_folder [FOLDER-TO-TEST]
 ```
 
-DATASET OPTIONS: rico, rico2k, rico10k, rico5box, ricotext
+Dataset options: rico, rico2k, rico10k, rico5box, ricotext
 
-Put the pretrained model in the folder ("PyTorch-YOLOv3/result/run//{dataset}"). 
-
-- For example, for "rico" dataset, place the model in "PyTorch-YOLOv3/result/run/rico"
+Place the pretrained model in the folder *PyTorch-YOLOv3/result/run/[DATASET]*
 
 
 ### CenterNet
 ```
-python demo.py  --cfg_file CenterNet-52-[DATASET] --test_folder [FOLDER-TO-TEST]
+python demo.py  \
+--cfg_file CenterNet-52-[DATASET] \
+--test_folder [FOLDER-TO-TEST]
 ```
 
-DATASET OPTIONS: rico, rico2k, rico10k, ricotext
+Dataset options: rico, rico2k, rico10k, ricotext
 
-Put the pretrained model in the folder ("CenterNet-master/results/run/CenterNet-52/{dataset}"). 
-
-- For example, for "rico" dataset, place the model in "CenterNet-master/results/run/CenterNet-52/rico"
+Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet-52/[DATASET]*
 
 
 ## ACKNOWNLEDGES
