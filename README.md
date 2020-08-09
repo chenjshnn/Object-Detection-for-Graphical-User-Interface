@@ -24,9 +24,12 @@ Coming soon
 
 
 
-### REMAUI
+### Baselines
 
-See https://github.com/soumikmohianuta/pixtoapp
+See the corresponding folder in this repository. Each folder contains a README file.
+
+For REAMUI, see https://github.com/soumikmohianuta/pixtoapp
+
 
 ## ACKNOWNLEDGES
 
