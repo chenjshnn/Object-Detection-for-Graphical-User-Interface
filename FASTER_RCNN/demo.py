@@ -78,15 +78,9 @@ def parse_args():
   parser.add_argument('--parallel_type', dest='parallel_type',
                       help='which part of model to parallel, 0: all, 1: model before roi pooling',
                       default=0, type=int)
-  parser.add_argument('--checksession', dest='checksession',
-                      help='checksession to load model',
-                      default=1, type=int)
-  parser.add_argument('--checkepoch', dest='checkepoch',
-                      help='checkepoch to load network',
-                      default=1, type=int)
-  parser.add_argument('--checkpoint', dest='checkpoint',
-                      help='checkpoint to load network',
-                      default=10021, type=int)
+  parser.add_argument('--pretrained_model_name', dest='pretrained_model_name',
+                      help='pretrained_model_name',
+                      default="faster_rcnn.pth", type=str)
   parser.add_argument('--bs', dest='batch_size',
                       help='batch_size',
                       default=1, type=int)
@@ -154,14 +148,10 @@ if __name__ == '__main__':
       args.set_cfgs = ['ANCHOR_SCALES', '[8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]']
   elif args.dataset == "vg":
       args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]']
-  elif "ricodefaultAspectRatio" in args.dataset:
+  elif "ricoDefault" in args.dataset:
       args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]', 'MAX_NUM_GT_BOXES', '30']
-  elif 'ricobetterRatioAndScale' in args.dataset:
+  elif 'ricoCustomized' in args.dataset:
       args.set_cfgs = ['ANCHOR_SCALES', '[2, 4, 8, 16]', 'ANCHOR_RATIOS', '[1, 2, 4, 8]', 'MAX_NUM_GT_BOXES', '30']
-  elif 'ricoRight' in args.dataset:
-      args.set_cfgs = ['ANCHOR_SCALES', '[2, 4, 8, 16]', 'ANCHOR_RATIOS', '[1, 0.5, 0.25, 0.125]', 'MAX_NUM_GT_BOXES', '60']
-  elif 'ricoBetter2' in args.dataset:
-      args.set_cfgs = ['ANCHOR_SCALES', '[1, 2, 4, 8, 16]', 'ANCHOR_RATIOS', '[0.5, 1, 2, 4, 8]', 'MAX_NUM_GT_BOXES', '50']
   elif "rico" in args.dataset:
       args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[1, 2, 4, 8]']
   else:
@@ -186,8 +176,7 @@ if __name__ == '__main__':
   input_dir = args.load_dir + "/" + args.net + "/" + args.dataset
   if not os.path.exists(input_dir):
     raise Exception('There is no input directory for loading network from ' + input_dir)
-  load_name = os.path.join(input_dir,
-    'faster_rcnn_{}_{}_{}.pth'.format(args.checksession, args.checkepoch, args.checkpoint))
+  load_name = os.path.join(input_dir,args.pretrained_model_name)
 
   pascal_classes = np.asarray(['__background__',
                        'Button', 'CheckBox', 'Chronometer',
@@ -197,6 +186,14 @@ if __name__ == '__main__':
                        'VideoView'
                 ])
 
+  if "Text" in args.dataset:
+      pascal_classes = np.asarray(['__background__',
+                       'Button', 'CheckBox', 'Chronometer',
+                       'EditText', 'ImageButton', 'ImageView',
+                       'ProgressBar', 'RadioButton', 'RatingBar',
+                       'SeekBar', 'Spinner', 'Switch', 'ToggleButton',
+                       'VideoView', 'TextView'
+                ])
   # initilize the network here.
   if args.net == 'vgg16':
     fasterRCNN = vgg16(pascal_classes, pretrained=False, class_agnostic=args.class_agnostic)

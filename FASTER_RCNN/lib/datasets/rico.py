@@ -42,6 +42,7 @@ class rico(imdb):
     # load category
     cats = self._COCO.loadCats(self._COCO.getCatIds())
     self._classes = tuple(['__background__'] + [c['name'] for c in cats])
+    print(self._classes)
     self._class_to_ind = dict(list(zip(self.classes, list(range(self.num_classes)))))
     self._class_to_coco_cat_id = dict(list(zip([c['name'] for c in cats],
                                                self._COCO.getCatIds())))

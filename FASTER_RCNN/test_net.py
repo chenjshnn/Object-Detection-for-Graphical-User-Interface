@@ -61,6 +61,9 @@ def parse_args():
   parser.add_argument('--load_dir', dest='load_dir',
                       help='directory to load models', default="models",
                       type=str)
+  parser.add_argument('--pretrained_model_name', dest='pretrained_model_name',
+                      help='Filename of the pretrained_model', default="faster_rcnn.pth",
+                      type=str)
   parser.add_argument('--split', dest='split',
                       help='split', default="val",
                       type=str)
@@ -79,15 +82,6 @@ def parse_args():
   parser.add_argument('--parallel_type', dest='parallel_type',
                       help='which part of model to parallel, 0: all, 1: model before roi pooling',
                       default=0, type=int)
-  parser.add_argument('--checksession', dest='checksession',
-                      help='checksession to load model',
-                      default=1, type=int)
-  parser.add_argument('--checkepoch', dest='checkepoch',
-                      help='checkepoch to load network',
-                      default=1, type=int)
-  parser.add_argument('--checkpoint', dest='checkpoint',
-                      help='checkpoint to load network',
-                      default=10021, type=int)
   parser.add_argument('--vis', dest='vis',
                       help='visualization mode',
                       action='store_true')
@@ -155,8 +149,7 @@ if __name__ == '__main__':
   input_dir = args.load_dir + "/" + args.net + "/" + args.dataset
   if not os.path.exists(input_dir):
     raise Exception('There is no input directory for loading network from ' + input_dir)
-  load_name = os.path.join(input_dir,
-    'faster_rcnn_{}_{}_{}.pth'.format(args.checksession, args.checkepoch, args.checkpoint))
+  load_name = os.path.join(input_dir, args.pretrained_model_name)
 
   # initilize the network here.
   if args.net == 'vgg16':

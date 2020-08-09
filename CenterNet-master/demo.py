@@ -20,10 +20,9 @@ torch.backends.cudnn.benchmark = False
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Test CenterNet")
-    parser.add_argument("--cfg_file", help="config file", type=str, default = "CenterNet-52-rico")
-    parser.add_argument("--testiter", dest="testiter",
-                        help="test at iteration i",
-                        default=145000, type=int)
+    parser.add_argument("--cfg_file", help="config file", type=str, \
+                        choices=["CenterNet-52-rico", "CenterNet-52-rico2k", "CenterNet-52-rico10k", \
+                                 "CenterNet-52-ricotext"])
     parser.add_argument("--test_folder", dest="test_folder",
                         help="which test_folder to use",
                         default="validation", type=str)
@@ -89,13 +88,10 @@ def test(db, split, testiter, num_classes, result_dir, imgname2id, debug=False, 
     print("resu", result_dir)
     make_dirs([result_dir])
 
-    test_iter = system_configs.max_iter if testiter is None else testiter
-    print("loading parameters at iteration: {}".format(test_iter))
-
     print("building neural network...")
     nnet = NetworkFactory(db, num_classes)
     print("loading parameters...")
-    nnet.load_params(test_iter)
+    nnet.load_params("")
 
     # test_file = "test.{}".format(db.data)
 
@@ -166,4 +162,4 @@ if __name__ == "__main__":
     print("db config...")
     pprint.pprint(testing_db.configs)
 
-    test(testing_db, split, args.testiter, configs["db"]["categories"], args.test_folder, imgname2id, args.debug, args.suffix)
+    test(testing_db, split, "", configs["db"]["categories"], args.test_folder, imgname2id, args.debug, args.suffix)
