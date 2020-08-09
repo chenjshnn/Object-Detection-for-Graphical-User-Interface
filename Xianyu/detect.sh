@@ -1,0 +1,1 @@
+python3 detect.py --test_folder [FOLDER-TO-TEST]

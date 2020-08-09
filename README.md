@@ -11,7 +11,7 @@
 - Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
 - Dataset: Our dataset is based on [Rico](https://interactionmining.org/rico)
 
-- Pretrained Models: [DropBox]()
+- Pretrained Models: [DropBox](.)
 
 - Code: see in this repository
 
@@ -47,7 +47,19 @@ cd models/py_utils/_cpools & python setup.py install --user
 
 ### Xianyu
 
-Coming soon
+** Tesseract
+
+```
+sudo add-apt-repository -y ppa:alex-p/tesseract-ocr 
+sudo apt update
+sudo apt install  -y tesseract-ocr
+```
+
+** opencv
+
+```
+python3 -m pip install opencv-python
+```
 
 
 ### REMAUI
@@ -104,6 +116,11 @@ Dataset options: rico, rico2k, rico10k, ricotext
 
 Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet-52/[DATASET]*
 
+
+### Xianyu
+```
+python3 detect.py --test_folder [FOLDER-TO-TEST]
+```
 
 ## ACKNOWNLEDGES
 
