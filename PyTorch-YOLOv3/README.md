@@ -1,13 +1,13 @@
 # YOLOv3
 
-##Setup
+## Setup
 
 ```
 cd PyTorch-YOLOv3
 pip install -r requirements.txt
 ```
 
-##Test
+## Test
 
 ```
 python detect.py  \
@@ -21,5 +21,4 @@ Dataset options: rico, rico2k, rico10k, rico5box, ricotext
 Place the pretrained model in the folder *PyTorch-YOLOv3/result/run/[DATASET]*
 
 
-
-**For more information, see https://github.com/eriklindernoren/PyTorch-YOLOv3 **
+**For more information, see https://github.com/eriklindernoren/PyTorch-YOLOv3**

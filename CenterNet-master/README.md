@@ -21,4 +21,4 @@ Dataset options: rico, rico2k, rico10k, ricotext
 
 Place the pretrained model in the folder *CenterNet-master/results/run/CenterNet-52/[DATASET]*
 
-**For more information, see https://github.com/Duankaiwen/CenterNet **
+**For more information, see https://github.com/Duankaiwen/CenterNet**
