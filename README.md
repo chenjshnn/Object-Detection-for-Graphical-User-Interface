@@ -23,12 +23,11 @@ All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.5, Pytorch 1.0.1, Nvid
 See [GitHub](https://github.com/MulongXie/UIED)
 
 
-
 ### Baselines
 
 See the corresponding folder in this repository. Each folder contains a README file.
 
-For REAMUI, see https://github.com/soumikmohianuta/pixtoapp
+For REAMUI, see [pix2app](https://github.com/soumikmohianuta/pixtoapp)
 
 
 ## ACKNOWNLEDGES
