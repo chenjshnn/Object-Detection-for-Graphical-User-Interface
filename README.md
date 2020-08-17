@@ -7,7 +7,7 @@
 
 ## RESOURCE
 
-- Paper: [ArXiv](https://arxiv.org/abs/2008.05132)
+- Paper: [arXiv](https://arxiv.org/abs/2008.05132)
 - Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
 - Dataset: Our dataset is based on [Rico](https://interactionmining.org/rico)
 
