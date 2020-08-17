@@ -25,7 +25,9 @@ See [GitHub](https://github.com/MulongXie/UIED)
 
 ### Baselines
 
-See the corresponding folder in this repository. Each folder contains a README file.
+See the corresponding folder in this repository. Each folder contains an individual README file.
+
+[Faster RCNN](./FASTER_RCNN), [YOLOv3](./PyTorch-YOLOv3), [CenterNet](./CenterNet-master), [Xianyu](./Xianyu)
 
 For REAMUI, see [pix2app](https://github.com/soumikmohianuta/pixtoapp)
 
