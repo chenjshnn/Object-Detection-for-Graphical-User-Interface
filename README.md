@@ -49,3 +49,15 @@ We implement Xianyu based on their technical blog
 - XianYu: https://laptrinhx.com/ui2code-how-to-fine-tune-background-and-foreground-analysis-2293652041/
 
 COCOApi: https://github.com/cocodataset/cocoapi
+
+
+# Citation
+
+```
+@inproceedings{chen2020object,
+  title={Object Detection for Graphical User Interface: Old Fashioned or Deep Learning or a Combination?},
+  author={Chen, Jieshan and Xie, Mulong and Xing, Zhenchang and Chen, Chunyang and Xu, Xiwei and Zhu, Liming},
+  booktitle={Proceedings of the 2020 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+  year={2020}
+}
+```
