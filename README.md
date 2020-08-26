@@ -58,6 +58,9 @@ COCOApi: https://github.com/cocodataset/cocoapi
   title={Object Detection for Graphical User Interface: Old Fashioned or Deep Learning or a Combination?},
   author={Chen, Jieshan and Xie, Mulong and Xing, Zhenchang and Chen, Chunyang and Xu, Xiwei and Zhu, Liming},
   booktitle={Proceedings of the 2020 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
-  year={2020}
+  year={2020},
+  publisher = "ACM",
+  address = "New York, NY",
+  doi = "10.1145/3368089.3409691",
 }
 ```
