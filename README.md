@@ -67,15 +67,15 @@ COCOApi: https://github.com/cocodataset/cocoapi
 }
 
 @inbook{UIED,
-author = {Xie, Mulong and Feng, Sidong and Xing, Zhenchang and Chen, Jieshan and Chen, Chunyang},
-title = {UIED: A Hybrid Tool for GUI Element Detection},
-year = {2020},
-isbn = {9781450370431},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3368089.3417940},
-booktitle = {Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
-pages = {1655–1659},
-numpages = {5}
+  author = {Xie, Mulong and Feng, Sidong and Xing, Zhenchang and Chen, Jieshan and Chen, Chunyang},
+  title = {UIED: A Hybrid Tool for GUI Element Detection},
+  year = {2020},
+  isbn = {9781450370431},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3368089.3417940},
+  booktitle = {Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+  pages = {1655–1659},
+  numpages = {5}
 }
 ```
