@@ -17,7 +17,7 @@
 
 
 ## CODE
-All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.5, Pytorch 1.0.1, Nvidia 1080 Ti
+All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.9, torch 1.12.1, Nvidia 1080 Ti
 
 
 ### Our model
