@@ -12,7 +12,7 @@
 - Tool Demo: [Website](http://uied.online), [GitHub](https://github.com/MulongXie/UIED-WebAPP)
 - Dataset: Our dataset is based on [Rico](https://interactionmining.org/rico)
 
-- Pretrained Models: [DropBox](https://www.dropbox.com/sh/xm1ssjkrqep3tah/AADwr4TAaVGak6wx57xuTVZsa?dl=0)
+- Pretrained Models, Data Splitting and Processed Dataset: [Zenodo](https://zenodo.org/record/8098605)
 - Tool: http://uied.online
 
 
