@@ -19,6 +19,8 @@
 ## CODE
 All code is tested under Ubuntu 16.04, Cuda 9.0, PyThon 3.9, torch 1.12.1, Nvidia 1080 Ti
 
+FasterRNN is also tested under Ubuntu 22.04, Cuda 12.0, Python 3.10, pytorch 2.2.0, Nvidia 1080 Ti. Please refer to [DL_setup_troubleshootiing.md](.DL_setup_troubleshootiing.md) to see how to adjust the cu files.
+
 
 ### Our model
 
