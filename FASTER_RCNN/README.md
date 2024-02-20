@@ -7,7 +7,7 @@ source github: https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0
 ```
 cd FASTER_RCNN
 pip install -r requirements.txt
-rm lib/build/*
+rm -r lib/build/*
 cd lib & python setup.py build develop
 ```
 
