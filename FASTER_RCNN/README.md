@@ -28,7 +28,8 @@ Dataset options: ricoCustomized, rico2k, rico10k, ricoDefault, ricoText
 
 Put the pretrained model in the folder *FASTER_RCNN/results/run/res101/[DATASET]*
 
-### Check out the common issues and solutions at [DL_setup_troubleshootiing.md](../DL_setup_troubleshootiing.md)
+## Common issues and solutions
+See [DL_setup_troubleshootiing.md](../DL_setup_troubleshootiing.md)
 
 **For more information, see https://github.com/jwyang/faster-rcnn.pytorch/tree/pytorch-1.0**
 
